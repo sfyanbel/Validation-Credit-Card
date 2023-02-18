@@ -1,59 +1,51 @@
 <?php
 
-
-
 class AmericanExpress
 {
     //American Express cards always begin with the number 3, more specifically 34 or 37
-    static $fistNumber=3;
+    static $FNumber=3;
 
-    static $name = 'AmericanExpress';
+    static $name = 'This is AmericanExpress Credit Card';
 }
 class Visa 
 {
     //Visa cards begin with the number 4.
-    static $fistNumber=4;
+    static $FNumber=4;
  
-    static $name = 'Visa';
+    static $name = 'This is Visa Credit Card';
 }
 class MasterCards
 {
     //Mastercards start with the number 5.
-    static $fistNumber=5;
+    static $FNumber=5;
   
-    static $name = 'MasterCards';
+    static $name = 'This is MasterCards Credit Card';
 }
 class Discover
 {
     //Discover Cards begin with the number 6.
-    static $fistNumber=6;
+    static $FNumber=6;
    
-    static $name = 'Discover';
+    static $name = 'This is Discover Credit Card';
 }
 
 
 // MasterCards Credit Card
-$testCreditCard = "094341960148925";
+$testCreditCard = "394341960148925";
 
 //first number of Credit Card
 $firstNumber = substr($testCreditCard, 0, 1);
 
 
 $CreditCard = [
-    '3' => AmericanExpress::$name,
-    '4' => Visa::$name,
-    '5' => MasterCards::$name,
-    '6' => Discover::$name,
-    '0' => 'not exist',
-    '1' => 'not exist',
-    '2' => 'not exist',
-    '3' => 'not exist',
-    '4' => 'not exist',
-    '5' => 'not exist',
-    '6' => 'not exist',
-    '7' => 'not exist',
-    '8' => 'not exist',
-    '9' => 'not exist',
+    AmericanExpress::$FNumber => AmericanExpress::$name,
+    Visa::$FNumber => Visa::$name,
+    MasterCards::$FNumber => MasterCards::$name,
+    Discover::$FNumber => Discover::$name,
+    // as $firstNumber just one char is possible to Control to the safty null index 
+    //without using any extra Resource for best : Big O(n)
+    '0' => 'not exist','1' => 'not exist','2' => 'not exist',
+    '7' => 'not exist','8' => 'not exist','9' => 'not exist',
   ];
 
 
