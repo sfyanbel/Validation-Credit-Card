@@ -30,13 +30,15 @@ class Discover
 }
 
 
-// MasterCards Credit Card
-$testCreditCard = "394341960148925";
+// Test Credit Card
+$testCreditCard = "494341960148925";
 
-//first number of Credit Card
+//first number of test Credit Card
 $firstNumber = substr($testCreditCard, 0, 1);
 
 
+// index = First Number of the every Credit Type &&
+// value = name of the Credit Card
 $CreditCard = [
     AmericanExpress::$FNumber => AmericanExpress::$name,
     Visa::$FNumber => Visa::$name,
